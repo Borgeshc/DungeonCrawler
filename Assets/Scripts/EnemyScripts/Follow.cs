@@ -7,16 +7,19 @@ public class Follow : MonoBehaviour
 	public int maxSpeed;
 	float speed;
 	GameObject target;
+    NavMeshAgent agent;
 
 	void Start()
 	{
 		target = GameObject.FindGameObjectWithTag ("Player");
 		speed = Random.Range (minSpeed, maxSpeed);
+        agent = GetComponent<NavMeshAgent>();
 	}
 	void Update () 
 	{
 		transform.LookAt (target.transform);
-		transform.Translate (Vector3.forward * speed * Time.deltaTime);
+        agent.SetDestination(target.transform.position);
+		//transform.Translate (Vector3.forward * speed * Time.deltaTime);
 	}
 	public void UpdateSpeed()
 	{
