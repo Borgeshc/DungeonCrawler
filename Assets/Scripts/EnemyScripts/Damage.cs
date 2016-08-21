@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Damage : MonoBehaviour 
 {
-	void OnCollisionEnter(Collision other)
+    public string targetTag;
+
+    void OnCollisionEnter(Collision other)
 	{
-		if (other.transform.tag == "Player") 
+		if (other.transform.tag == targetTag) 
 		{
 			GetComponent<Follow>().enabled = false;
 			other.transform.GetComponent<Health>().TookDamage();
@@ -13,7 +15,7 @@ public class Damage : MonoBehaviour
 	}
 	void OnCollisionExit(Collision other)
 	{
-		if (other.transform.tag == "Player") 
+		if (other.transform.tag == targetTag) 
 		{
 			GetComponent<Follow>().enabled = true;
 		}

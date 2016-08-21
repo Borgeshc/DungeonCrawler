@@ -75,6 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EnemyInRange.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\LockCursor.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Damage.cs" />
@@ -87,7 +89,9 @@
     <Compile Include="Assets\Scripts\PlayerScripts\Health.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\LookAtMouse.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Turret.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\Walk.cs" />
+    <Compile Include="Assets\WinCondition.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

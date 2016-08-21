@@ -3,11 +3,15 @@ using System.Collections;
 
 public class ObjectManager : MonoBehaviour 
 {
-	public GameObject[] enemies;
-	public GameObject[] spawnPoints;
+	public GameObject[] playerOneEnemies;
+    public GameObject[] playerTwoEnemies;
 
-	void Update()
+	public GameObject[] playerOneSpawnPoints;
+    public GameObject[] playerTwoSpawnPoints;
+
+    void Update()
 	{
-		enemies = GameObject.FindGameObjectsWithTag ("Enemy");
-	}
+        playerOneEnemies = GameObject.FindGameObjectsWithTag ("PlayerOneUnit");
+        playerTwoEnemies = GameObject.FindGameObjectsWithTag("PlayerTwoUnit");
+    }
 }
